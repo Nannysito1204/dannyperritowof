@@ -17,9 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("No se encontró el botón btnConectar en el HTML");
     }
 
-    const btnBuscar = document.getElementById('btnBuscar');
-    if (btnBuscar) {
-        btnBuscar.addEventListener('click', Buscarcategoria);
+    const btnbuscar = document.getElementById('btnBuscar');
+    if (btnbuscar) {
+        btnbuscar.addEventListener('click', buscarcategoria);
     } else {
         console.error("No se encontró el botón btnBuscar en el HTML");
     }
