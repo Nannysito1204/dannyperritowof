@@ -5,33 +5,32 @@ const supabaseKey = 'sb_publishable_dXV5VSUTZfknTi6Vs4kduA_iQ0MlsxK';
 // 2. Creamos el cliente UNA SOLA VEZ y de forma global
 let supabaseClient = null;
 
-// 3. Esperamos a que el HTML esté cargado antes de Buscar el botón
+// 3. Esperamos a que el HTML esté cargado antes de buscar el botón
 document.addEventListener('DOMContentLoaded', () => {
     
     // Asignamos el evento click al botón CONECTAR
     const btnConectar = document.getElementById('btnConectar');
     
     if (btnConectar) {
-        btnConectar.addEventListener('click', ConectarSupabase);
+        btnConectar.addEventListener('click', conectarSupabase);
     } else {
         console.error("No se encontró el botón btnConectar en el HTML");
-    }
-
-    const btnbuscar = document.getElementById('btnBuscar');
-    if (btnbuscar) {
-        btnbuscar.addEventListener('click', buscarcategoria);
-    } else {
-        console.error("No se encontró el botón btnBuscar en el HTML");
     }
 });
 
 // 4. Función que se ejecuta al hacer clic en CONECTAR
-function ConectarSupabase() {
+function conectarSupabase() {
     try {
         // Si aún no se ha creado el cliente, lo creamos
         if (!supabaseClient) {
             supabaseClient = supabase.createClient(supabaseUrl, supabaseKey);
         }
+        const btnBuscar = document.getElementById('btnBuscar');
+    if (btnBuscar) {
+        btnBuscar.addEventListener('click', buscarCategoria);
+    } else {
+        console.error("No se encontró el botón btnBuscar en el HTML");
+    }
         
         // Si se crea correctamente, mostramos el mensaje
         alert("CONEXIÓN EXITOSA");
@@ -42,7 +41,7 @@ function ConectarSupabase() {
         console.error("Detalles del error:", error);
     }
 }
-async function Buscarcategoria() {
+async function buscarCategoria() {
     // 1. Verificar que el cliente esté conectado
     if (!supabaseClient) {
         alert("Primero debes conectarte 🔌");
@@ -94,3 +93,4 @@ async function Buscarcategoria() {
         console.error("Detalle del error:", error);
     }
 }
+
