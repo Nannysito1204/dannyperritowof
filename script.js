@@ -5,14 +5,14 @@ const supabaseKey = 'sb_publishable_dXV5VSUTZfknTi6Vs4kduA_iQ0MlsxK';
 // 2. Creamos el cliente UNA SOLA VEZ y de forma global
 let supabaseClient = null;
 
-// 3. Esperamos a que el HTML esté cargado antes de buscar el botón
+// 3. Esperamos a que el HTML esté cargado antes de Buscar el botón
 document.addEventListener('DOMContentLoaded', () => {
     
     // Asignamos el evento click al botón CONECTAR
     const btnConectar = document.getElementById('btnConectar');
     
     if (btnConectar) {
-        btnConectar.addEventListener('click', conectarSupabase);
+        btnConectar.addEventListener('click', ConectarSupabase);
     } else {
         console.error("No se encontró el botón btnConectar en el HTML");
     }
