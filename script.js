@@ -16,11 +16,10 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.error("No se encontró el botón btnConectar en el HTML");
     }
-     // Asignamos el evento click al botón BUSCAR
+
     const btnBuscar = document.getElementById('btnBuscar');
-    
     if (btnBuscar) {
-        btnBuscar.addEventListener('click',buscarCategoria);
+        btnBuscar.addEventListener('click', buscarCategoria);
     } else {
         console.error("No se encontró el botón btnBuscar en el HTML");
     }
