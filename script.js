@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // 4. Función que se ejecuta al hacer clic en CONECTAR
-function conectarSupabase() {
+function ConectarSupabase() {
     try {
         // Si aún no se ha creado el cliente, lo creamos
         if (!supabaseClient) {
