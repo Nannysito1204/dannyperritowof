@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const btnBuscar = document.getElementById('btnBuscar');
     if (btnBuscar) {
-        btnBuscar.addEventListener('click', buscarCategoria);
+        btnBuscar.addEventListener('click', Buscarcategoria);
     } else {
         console.error("No se encontró el botón btnBuscar en el HTML");
     }
@@ -42,7 +42,7 @@ function ConectarSupabase() {
         console.error("Detalles del error:", error);
     }
 }
-async function buscarCategoria() {
+async function Buscarcategoria() {
     // 1. Verificar que el cliente esté conectado
     if (!supabaseClient) {
         alert("Primero debes conectarte 🔌");
